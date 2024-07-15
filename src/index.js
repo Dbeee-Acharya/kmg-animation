@@ -1,4 +1,6 @@
 import "./style.scss";
 import spriteWalk from "./controller/spriteWalk";
+import { createBackground } from "./view/createBackground";
 
-spriteWalk();
+createBackground("bg.svg");
+//spriteWalk();
