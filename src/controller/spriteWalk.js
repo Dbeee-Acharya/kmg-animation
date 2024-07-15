@@ -3,6 +3,7 @@ import { stallInteraction } from "./stallInteraction";
 import { scroll } from "./windowHorizontalScroll";
 
 export default function () {
+  $(".swiper-container").focus();
   var sprite = document.querySelector(".sprite"),
     key = { left: false, right: false },
     trans = 0,
