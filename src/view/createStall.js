@@ -27,9 +27,9 @@ function createStallContainer(logoURL, bannerURL) {
   const stallBody = document.createElement("div");
   stallBody.classList.add("stall-body");
 
-  const imageContainer = document.createElement("image-container");
+  const imageContainer = document.createElement("div");
   imageContainer.classList.add("image-container");
-  const bannerImg = document.createElement("div");
+  const bannerImg = document.createElement("img");
   bannerImg.src = bannerURL;
 
   imageContainer.appendChild(bannerImg);
