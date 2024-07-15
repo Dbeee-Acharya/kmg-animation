@@ -15,6 +15,6 @@ for (let i = 0; i < 8; i++) {
 
 createScreenWrapper();
 
-createSprite();
+createSprite("man");
 
 spriteWalk();
