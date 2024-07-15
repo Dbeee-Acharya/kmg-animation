@@ -1,13 +1,20 @@
 import "./style.scss";
 import spriteWalk from "./controller/spriteWalk";
 import { createBackground } from "./view/createBackground";
-import { createStallWrapper } from "./view/createStallWrapper";
+import {
+  createScreenWrapper,
+  createStallWrapper,
+} from "./view/createStallWrapper";
+import { createSprite } from "./view/createSprite";
 
 createBackground("bg.svg");
-console.log(20);
 
 for (let i = 0; i < 8; i++) {
   createStallWrapper();
 }
 
-//spriteWalk();
+createScreenWrapper();
+
+createSprite();
+
+spriteWalk();

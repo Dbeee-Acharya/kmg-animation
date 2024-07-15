@@ -1,6 +1,6 @@
 function createStallInteraction() {
   const stallInteraction = document.createElement("div");
-  stallInteraction.TextContent = "<h1>Discount</h1>";
+  stallInteraction.textContent = "Discount";
   stallInteraction.classList.add("stall-interaction");
 
   return stallInteraction;

@@ -1,0 +1,46 @@
+$walking-man-width: 30400px;
+$walking-man-height: 600px;
+
+.sprite {
+  position: absolute;
+  z-index: 10;
+  bottom: 30px;
+  left: calc(50% - 51px);
+}
+
+.walking-man {
+  width: 220px; /* width of one frame */
+  height: 240px; /* height of the sprite sheet */
+  overflow: hidden;
+}
+
+.walking-man .image-wrapper {
+  /* width: var(--width);
+  height: var(--height); */
+  width: $walking-man-width;
+  height: $walking-man-height;
+  background-image: url("./assets/walking-man.png");
+  background-repeat: no-repeat;
+  transform: scale(0.4); /* scale down the image */
+  transform-origin: top left; /* set origin to top left to align correctly */
+}
+
+.walking-man .image-wrapper.walking {
+  background-image: url("./assets/walking-man.png");
+  animation: walk 1s steps(38) infinite;
+}
+
+.walking-reverse {
+  background-image: url("./assets/walking-man-reverse.png") !important;
+  animation: walk 1s steps(38) infinite reverse;
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    /* background-position: calc(var(--width) * -1) 0; /* Adjust according to the width of your sprite sheet */
+    background-position: calc($walking-man-width * -1) 0;
+  }
+}

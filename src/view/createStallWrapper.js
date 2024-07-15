@@ -21,4 +21,16 @@ function createStallWrapper() {
   swiperContainer.appendChild(swiperSlide);
 }
 
-export { createStallWrapper };
+function createScreenWrapper() {
+  const swiperSlide = document.createElement("div");
+  swiperSlide.classList.add("swiper-slide");
+
+  const screen = createScreen("<h1>Test</h1>");
+
+  swiperSlide.appendChild(screen);
+
+  const swiperContainer = document.querySelector(".swiper-wrapper");
+  swiperContainer.appendChild(swiperSlide);
+}
+
+export { createStallWrapper, createScreenWrapper };
