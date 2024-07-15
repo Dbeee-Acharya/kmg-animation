@@ -6,16 +6,11 @@ function createBackground(imageSource) {
       const backgroundImage = new Image();
       backgroundImage.src = imgSrc;
 
-      const swiperContainer = document.querySelector(".swiper-container");
-
-      const swiperWrapper = document.createElement("div");
+      const swiperWrapper = document.querySelector(".swiper-wrapper");
       swiperWrapper.style.backgroundImage = backgroundImage;
-      swiperWrapper.style.backgroundRepeat = "no-repeat";
+      swiperWrapper.style.backgroundRepeat = "repeat-x";
       swiperWrapper.style.backgroundSize = "cover";
       swiperWrapper.style.backgroundPosition = "center bottom";
-
-      swiperWrapper.classList.add("swiper-wrapper");
-      swiperContainer.appendChild(swiperWrapper);
     })
     .catch((error) => {
       console.error("error loosing image:", error);
