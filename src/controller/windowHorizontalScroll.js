@@ -1,7 +1,6 @@
 var element = document.querySelector(".swiper-container");
 const windowWidth = window.innerWidth;
 function scroll(e) {
-  console.log("called");
   e.preventDefault();
   const keyScrollMapping = {
     37: -100,

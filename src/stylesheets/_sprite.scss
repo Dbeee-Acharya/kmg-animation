@@ -1,6 +1,9 @@
 $walking-man-width: 30400px;
 $walking-man-height: 600px;
 
+$walking-woman-width: 9600px;
+$walking-woman-height: 360px;
+
 .sprite {
   position: absolute;
   z-index: 10;
@@ -8,31 +11,71 @@ $walking-man-height: 600px;
   left: calc(50% - 51px);
 }
 
+.walking-man-wrapper {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-65%, 0);
+}
+
 .walking-man {
-  width: 220px; /* width of one frame */
-  height: 240px; /* height of the sprite sheet */
   overflow: hidden;
 }
 
-.walking-man .image-wrapper {
-  /* width: var(--width);
-  height: var(--height); */
+.walking-man.man {
+  width: 165px;
+  height: 195px;
+}
+
+.walking-man.woman {
+  width: 165px;
+  height: 195px;
+}
+
+.walking-man.man .image-wrapper {
   width: $walking-man-width;
   height: $walking-man-height;
   background-image: url("./assets/walking-man.png");
+  transform: scale(0.3);
+}
+
+.walking-man.woman .image-wrapper {
+  width: $walking-woman-width;
+  height: $walking-woman-height;
+  background-image: url("./assets/walking-woman.png");
+  transform: scale(0.5);
+}
+
+.walking-man .image-wrapper {
   background-repeat: no-repeat;
-  transform: scale(0.4); /* scale down the image */
-  transform-origin: top left; /* set origin to top left to align correctly */
+  transform-origin: top left;
 }
 
-.walking-man .image-wrapper.walking {
+.walking-man.man .image-wrapper.walking {
   background-image: url("./assets/walking-man.png");
-  animation: walk 1s steps(38) infinite;
+  animation: walk 0.8s steps(38) infinite;
 }
 
-.walking-reverse {
+.walking-man.woman .image-wrapper.walking {
+  background-image: url("./assets/walking-woman.png");
+  animation: walkWoman 0.8s steps(20) infinite;
+}
+
+.walking-man.man .walking-reverse {
   background-image: url("./assets/walking-man-reverse.png") !important;
-  animation: walk 1s steps(38) infinite reverse;
+  animation: walk 0.8s steps(38) infinite reverse;
+}
+
+.walking-man.woman .walking-reverse {
+  background-image: url("./assets/walking-woman-reverse.png") !important;
+  animation: walkWoman 0.8s steps(20) infinite reverse;
+}
+
+.walking-man.man .reverse-man {
+  background-image: url("./assets/walking-man-reverse.png") !important;
+}
+
+.walking-man.woman .reverse-man {
+  background-image: url("./assets/walking-woman-reverse.png") !important;
 }
 
 @keyframes walk {
@@ -40,7 +83,15 @@ $walking-man-height: 600px;
     background-position: 0 0;
   }
   100% {
-    /* background-position: calc(var(--width) * -1) 0; /* Adjust according to the width of your sprite sheet */
     background-position: calc($walking-man-width * -1) 0;
+  }
+}
+
+@keyframes walkWoman {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc($walking-woman-width * -1) 0;
   }
 }

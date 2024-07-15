@@ -4,6 +4,7 @@ function createSprite() {
 
   const walkingPerson = document.createElement("div");
   walkingPerson.classList.add("walking-man");
+  walkingPerson.classList.add("woman");
 
   const imageWrapper = document.createElement("div");
   imageWrapper.classList.add("image-wrapper");
