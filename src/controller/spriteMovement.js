@@ -1,3 +1,6 @@
+import { playAudio, pauseAudio } from "./audioPlayer";
+import { stallInteraction } from "./stallInteraction";
+
 const spriteMovement = () => {
   let max_m_pos = 50;
   let min_m_pos = 5;
@@ -19,19 +22,25 @@ const spriteMovement = () => {
   document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowRight") {
       event.preventDefault();
+      playAudio();
       moveRight();
+      stallInteraction();
     } else if (event.key === "ArrowLeft") {
       event.preventDefault();
+      playAudio();
       moveLeft();
+      stallInteraction();
     }
   });
 
   document.addEventListener("keyup", function (event) {
     const imageWrapper = document.querySelector(".walking-man .image-wrapper");
     if (event.key === "ArrowRight") {
+      pauseAudio();
       imageWrapper.classList.remove("walking");
       imageWrapper.classList.remove("reverse-man");
     } else if (event.key === "ArrowLeft") {
+      pauseAudio();
       imageWrapper.classList.remove("walking-reverse");
       imageWrapper.classList.add("reverse-man");
     }
@@ -167,6 +176,7 @@ const spriteMovement = () => {
   }
 
   function detectScrollEnd() {
+    pauseAudio();
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       imageWrapper.classList.remove("walking-reverse");
