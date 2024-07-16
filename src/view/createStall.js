@@ -52,7 +52,11 @@ function createScreen(iframe) {
 
   const videoContainer = document.createElement("div");
   videoContainer.classList.add("image-container");
-  videoContainer.textContent = iframe;
+
+  const iframeContainer = document.createElement("iframe");
+  iframeContainer.src = iframe;
+
+  videoContainer.appendChild(iframeContainer);
 
   stallContainer.appendChild(stallHead);
   stallContainer.appendChild(videoContainer);

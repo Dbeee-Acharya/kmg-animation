@@ -15,8 +15,10 @@ function stallInteraction() {
       (xPosition > windowWidthMiddle - 200)
     ) {
       //slideInteraction.style.display = "flex";
-      slideInteraction.classList.add("visible");
-      slideInteraction.parentElement.classList.add("active");
+      if (slideInteraction) {
+        slideInteraction.classList.add("visible");
+        slideInteraction.parentElement.classList.add("active");
+      }
     } else {
       if (slideInteraction) {
         //slideInteraction.style.display = "none";
