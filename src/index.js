@@ -1,5 +1,4 @@
 import "./style.scss";
-import spriteWalk from "./controller/spriteWalk";
 import { createBackground } from "./view/createBackground";
 import {
   createScreenWrapper,
@@ -18,6 +17,4 @@ createScreenWrapper();
 
 createSprite("man");
 
-//spriteWalk();
-//
 spriteMovement();
