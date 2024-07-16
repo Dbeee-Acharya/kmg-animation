@@ -6,6 +6,7 @@ import {
   createStallWrapper,
 } from "./view/createStallWrapper";
 import { createSprite } from "./view/createSprite";
+import { spriteMovement } from "./controller/spriteMovement";
 
 createBackground("bg.svg");
 
@@ -17,4 +18,6 @@ createScreenWrapper();
 
 createSprite("man");
 
-spriteWalk();
+//spriteWalk();
+//
+spriteMovement();
