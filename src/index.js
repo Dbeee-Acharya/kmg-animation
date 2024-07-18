@@ -6,6 +6,7 @@ import {
 } from "./view/createStallWrapper";
 import { createSprite } from "./view/createSprite";
 import { spriteMovement } from "./controller/spriteMovement";
+import { chooseCharacterButtons } from "./view/chooseCharacterButtons";
 
 createBackground("bg.svg");
 
@@ -28,7 +29,10 @@ for (let i = 0; i < logoUrlList.length; i++) {
   createStallWrapper(logoUrlList[i], bannerUrlList[i]);
 }
 
-createScreenWrapper(iframe);
+createScreenWrapper();
+
+const mainWrapper = document.querySelector(".main-wrapper");
+mainWrapper.appendChild(chooseCharacterButtons());
 
 createSprite("woman");
 
