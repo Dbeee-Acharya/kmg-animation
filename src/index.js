@@ -6,9 +6,9 @@ import {
 } from "./view/createStallWrapper";
 import { createSprite } from "./view/createSprite";
 import { spriteMovement } from "./controller/spriteMovement";
-import { chooseCharacterButtons } from "./view/chooseCharacterButtons";
+import { chooseCharacterButtons } from "./view/chooseCharacter";
 
-createBackground("bg.svg");
+/*createBackground("bg.svg");
 
 let logoUrlList = [
   "https://assets.kfc.com.np/storage/uploads/images/Kfcheaderlogo/63e64b753ab7a.jpg",
@@ -36,4 +36,6 @@ mainWrapper.appendChild(chooseCharacterButtons());
 
 createSprite("woman");
 
-spriteMovement();
+spriteMovement();*/
+const mainWrapper = document.querySelector(".main-wrapper");
+mainWrapper.appendChild(chooseCharacterButtons());

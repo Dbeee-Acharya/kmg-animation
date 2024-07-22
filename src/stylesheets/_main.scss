@@ -11,6 +11,7 @@
 }
 
 .swiper-container {
+  display: none;
   box-sizing: border-box;
   overflow: hidden;
   height: 500px;
@@ -21,6 +22,10 @@
   overflow-x: auto;
   color: black;
   background-color: white;
+}
+
+.swiper-container.visible {
+  display: block;
 }
 
 .swiper-container::-webkit-scrollbar {
