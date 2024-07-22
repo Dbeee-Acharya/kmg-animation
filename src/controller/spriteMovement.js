@@ -5,7 +5,7 @@ const spriteMovement = () => {
   let max_m_pos = 50;
   let min_m_pos = 5;
   let curr_m_pos = 5;
-  let end_max_m_pos = 95;
+  let end_max_m_pos = 85;
   let bg_p = 0;
   let isTouching = false;
   let scrollTimeout;
