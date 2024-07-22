@@ -1,5 +1,4 @@
 import "./style.scss";
-import { spriteMovement } from "./controller/spriteMovement";
 import { chooseCharacterButtons } from "./view/chooseCharacter";
 import { chooseCharacter } from "./controller/characterButtonPress";
 

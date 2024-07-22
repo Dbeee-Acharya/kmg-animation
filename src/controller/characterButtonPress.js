@@ -7,11 +7,12 @@ function chooseCharacter(character) {
 
   mainWrapper.classList.add("hide");
   buttonWrapper.remove();
-
   setTimeout(() => {
     createMainPage(character);
-    mainWrapper.classList.remove("hide");
-  }, 3000);
+    setTimeout(() => {
+      mainWrapper.classList.remove("hide");
+    }, 200);
+  }, 1500);
 }
 
 export { chooseCharacter };

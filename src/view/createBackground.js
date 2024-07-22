@@ -1,5 +1,4 @@
 function createBackground(imageSource) {
-  console.log("background-func");
   import(`../assets/${imageSource}`)
     .then((module) => {
       const imgSrc = module.default;

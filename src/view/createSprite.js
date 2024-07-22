@@ -1,3 +1,5 @@
+import { spriteMovement } from "../controller/spriteMovement";
+
 function createSprite(character = "woman") {
   const sprite = document.createElement("div");
   sprite.classList.add("sprite");
@@ -14,6 +16,8 @@ function createSprite(character = "woman") {
 
   const swiperContainer = document.querySelector(".main-wrapper");
   swiperContainer.appendChild(sprite);
+
+  spriteMovement();
 }
 
 export { createSprite };
