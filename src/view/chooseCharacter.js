@@ -8,14 +8,16 @@ const chooseCharacterButtons = () => {
 
   const womanButton = document.createElement("button");
   womanButton.setAttribute("id", "woman-button");
+  womanButton.classList.add("character-button");
 
   const manButton = document.createElement("button");
   manButton.setAttribute("id", "man-button");
+  manButton.classList.add("character-button");
 
-  const womanImage = new Image(100, 100);
+  const womanImage = new Image();
   womanImage.src = walkingWomanHeadSrc;
 
-  const manImage = new Image(100, 100);
+  const manImage = new Image();
   manImage.src = walkingManHeadSrc;
 
   womanButton.appendChild(womanImage);

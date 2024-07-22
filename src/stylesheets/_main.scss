@@ -8,6 +8,12 @@
   position: relative;
   height: 500px;
   background-color: white;
+  opacity: 1;
+  transition: all 3s ease-in-out;
+}
+
+.main-wrapper.hide {
+  opacity: 0;
 }
 
 .swiper-container {
