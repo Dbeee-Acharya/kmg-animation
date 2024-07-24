@@ -1,5 +1,6 @@
 import { playAudio, pauseAudio } from "./audioPlayer";
 import { stallInteraction } from "./stallInteraction";
+import { welcomeGateInteraction } from "./welcomeGateInteraction";
 
 const spriteMovement = () => {
   let max_m_pos = 50;
@@ -14,7 +15,6 @@ const spriteMovement = () => {
 
   let imageWrapper = document.querySelector(".walking-man .image-wrapper");
   let contentWrapper = document.querySelector(".swiper-container");
-  console.log(contentWrapper);
   let manWrapper = document.querySelector(".sprite");
 
   manWrapper.setAttribute("style", "left:" + curr_m_pos + "%");
@@ -24,11 +24,13 @@ const spriteMovement = () => {
       event.preventDefault();
       playAudio();
       moveRight();
+      welcomeGateInteraction();
       stallInteraction();
     } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       playAudio();
       moveLeft();
+      welcomeGateInteraction();
       stallInteraction();
     }
   });

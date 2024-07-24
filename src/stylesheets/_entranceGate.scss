@@ -9,12 +9,19 @@ $second: #493e44;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
   height: 100%;
+
+  .welcome-message {
+    color: white;
+    font-size: 24px;
+  }
 
   .gate {
     position: relative;
     width: 250px;
     height: 140px;
+    left: 16px;
 
     .upper,
     .pillar,

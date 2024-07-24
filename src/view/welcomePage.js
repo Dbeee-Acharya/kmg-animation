@@ -5,6 +5,10 @@ const createWelcomeGate = () => {
   const mainGateContainer = document.createElement("div");
   mainGateContainer.classList.add("gate-container");
 
+  const welcomeMessage = document.createElement("div");
+  welcomeMessage.classList.add("welcome-message");
+  welcomeMessage.textContent = "Welcome to KMG";
+
   const gate = document.createElement("div");
   gate.classList.add("gate");
 
@@ -26,12 +30,11 @@ const createWelcomeGate = () => {
   gate.appendChild(rightpillar);
   gate.appendChild(leftPillar);
 
+  mainGateContainer.appendChild(welcomeMessage);
   mainGateContainer.appendChild(gate);
 
-  const mainWrapper = document.querySelector(".swiper-wrapper");
-  mainWrapper.appendChild(mainGateContainer);
-
   const swiperContainer = document.querySelector(".swiper-container");
+  swiperContainer.appendChild(mainGateContainer);
   swiperContainer.classList.add("visible");
 };
 

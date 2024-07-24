@@ -11,7 +11,7 @@ function chooseCharacter(character) {
   buttonWrapper.remove();
   setTimeout(() => {
     //createMainPage(character);
-    createWelcomeGate();
+    createWelcomeGate(character);
     createSprite("woman");
     setTimeout(() => {
       mainWrapper.classList.remove("hide");
