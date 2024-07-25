@@ -2,14 +2,6 @@
 import { createWelcomeGate } from "../view/welcomePage";
 import { createStreetLamp } from "../view/createCategoryButtons";
 
-const categoryList = [
-  "Electronics",
-  "Food",
-  "Automobiles",
-  "Clothing",
-  "Education",
-];
-
 function chooseCharacter(character) {
   const mainWrapper = document.querySelector(".main-wrapper");
   const swiperWrapper = document.querySelector(".swiper-wrapper");
@@ -21,9 +13,7 @@ function chooseCharacter(character) {
     //createMainPage(character);
     createWelcomeGate(character);
 
-    categoryList.forEach((category) => {
-      swiperWrapper.appendChild(createStreetLamp(category));
-    });
+    swiperWrapper.appendChild(createStreetLamp());
 
     setTimeout(() => {
       mainWrapper.classList.remove("hide");

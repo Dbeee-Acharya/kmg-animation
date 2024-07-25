@@ -8,15 +8,11 @@ const createStreetLamp = (productCategory = "Test Product") => {
   const pole = createElementWithClass("div", "pole");
   const poleTop = createElementWithClass("div", "poletop");
   const head = createElementWithClass("div", "head");
-  const category = createElementWithClass("div", "category");
   const top = createElementWithClass("div", "top");
   const glass = createElementWithClass("div", "glass");
   const bot = createElementWithClass("div", "bot");
   const light = createElementWithClass("div", "light");
 
-  category.innerText = productCategory;
-
-  head.appendChild(category);
   head.appendChild(top);
   head.appendChild(glass);
   head.appendChild(bot);
