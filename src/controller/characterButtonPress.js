@@ -1,10 +1,18 @@
 // logic for when character is choosen
-import { createMainPage } from "../view/createMainPage";
 import { createWelcomeGate } from "../view/welcomePage";
-import { createSprite } from "../view/createSprite";
+import { createStreetLamp } from "../view/createCategoryButtons";
+
+const categoryList = [
+  "Electronics",
+  "Food",
+  "Automobiles",
+  "Clothing",
+  "Education",
+];
 
 function chooseCharacter(character) {
   const mainWrapper = document.querySelector(".main-wrapper");
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
   const buttonWrapper = document.querySelector(".character-buttons-wrapper");
 
   mainWrapper.classList.add("hide");
@@ -12,7 +20,11 @@ function chooseCharacter(character) {
   setTimeout(() => {
     //createMainPage(character);
     createWelcomeGate(character);
-    createSprite("woman");
+
+    categoryList.forEach((category) => {
+      swiperWrapper.appendChild(createStreetLamp(category));
+    });
+
     setTimeout(() => {
       mainWrapper.classList.remove("hide");
     }, 200);

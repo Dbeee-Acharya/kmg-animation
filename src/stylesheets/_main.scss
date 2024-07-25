@@ -39,12 +39,12 @@
 }
 
 .swiper-wrapper {
-  /* width: fit-content; */
+  width: fit-content;
   display: flex;
   gap: 500px;
   height: 100%;
   background: url(./assets/bg.svg);
-  padding: 0px 600px 0 60%;
+  padding: 0px 600px 0 20%;
 }
 
 .swiper-slide {

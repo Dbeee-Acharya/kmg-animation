@@ -1,4 +1,5 @@
 import { createMainPage } from "../view/createMainPage";
+import { streetLampInteraction } from "./streetLampInteraction";
 
 const welcomeGateInteraction = (character) => {
   const spritePosition = document
@@ -10,7 +11,7 @@ const welcomeGateInteraction = (character) => {
     .getBoundingClientRect().left;
 
   if (spritePosition == gatePosition) {
-    console.log("create");
+    streetLampInteraction();
   }
 };
 

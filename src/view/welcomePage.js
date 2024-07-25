@@ -1,7 +1,8 @@
 //creates the welcome gate page
+import { createSprite } from "./createSprite";
 //
 
-const createWelcomeGate = () => {
+const createWelcomeGate = (character) => {
   const mainGateContainer = document.createElement("div");
   mainGateContainer.classList.add("gate-container");
 
@@ -33,8 +34,11 @@ const createWelcomeGate = () => {
   mainGateContainer.appendChild(welcomeMessage);
   mainGateContainer.appendChild(gate);
 
+  createSprite(character);
+
   const swiperContainer = document.querySelector(".swiper-container");
-  swiperContainer.appendChild(mainGateContainer);
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+  swiperWrapper.appendChild(mainGateContainer);
   swiperContainer.classList.add("visible");
 };
 
