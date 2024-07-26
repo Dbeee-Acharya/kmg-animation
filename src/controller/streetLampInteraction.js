@@ -10,7 +10,25 @@ const streetLampInteraction = () => {
 };
 
 const revealCategoryButtons = () => {
-  //code to reveal category buttons
+  const spritePosition = document
+    .querySelector(".sprite")
+    .getBoundingClientRect().left;
+
+  const lampPosition = document
+    .querySelector(".streetlamp")
+    .getBoundingClientRect().left;
+
+  const categoryButtons = document.querySelectorAll(".categories");
+
+  if (spritePosition > lampPosition - 120 && spritePosition < lampPosition) {
+    categoryButtons.forEach((category) => {
+      category.classList.add("visible");
+    });
+  } else {
+    categoryButtons.forEach((category) => {
+      category.classList.remove("visible");
+    });
+  }
 };
 
-export { streetLampInteraction };
+export { streetLampInteraction, revealCategoryButtons };

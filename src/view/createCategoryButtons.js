@@ -1,4 +1,5 @@
 //creates streetlamp
+import { revealCategoryButtons } from "../controller/streetLampInteraction";
 
 import { createElementWithClass } from "../controller/createElementsWithClass";
 
@@ -11,7 +12,7 @@ const categories = [
   "fashion",
   "test",
   "newcategory",
-  "anothercategory",
+  "another",
 ];
 
 const createStreetLamp = (productCategory = "Test Product") => {

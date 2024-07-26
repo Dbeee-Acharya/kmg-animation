@@ -1,6 +1,7 @@
 // logic for when character is choosen
 import { createWelcomeGate } from "../view/welcomePage";
 import { createStreetLamp } from "../view/createCategoryButtons";
+import { revealCategoryButtons } from "./streetLampInteraction";
 
 function chooseCharacter(character) {
   const mainWrapper = document.querySelector(".main-wrapper");

@@ -211,7 +211,7 @@ $pole-light: #233451;
     border: none;
   }
   .light.visible {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   .head .glass {
@@ -234,57 +234,69 @@ $pole-light: #233451;
   }
 
   .categories {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     color: white;
     background-color: rgba(245, 243, 176, 0.8);
     position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
     transition: all 1.2s ease-in;
   }
 
   #button1.visible {
+    top: 170px;
     left: -120px;
-    bottom: 120px;
+    opacity: 1;
   }
 
   #button2.visible {
     left: -170px;
-    bottom: 220px;
+    top: 70px;
+    opacity: 1;
   }
 
   #button3.visible {
-    bottom: 330px;
+    top: -30px;
     left: -150px;
+    opacity: 1;
   }
 
   #button4.visible {
     top: -128px;
     left: -90px;
+    opacity: 1;
   }
 
   #button5.visible {
     top: -140px;
     left: 30px;
+    opacity: 1;
   }
 
   #button6.visible {
     top: -110px;
     left: 140px;
+    opacity: 1;
   }
 
   #button7.visible {
     top: -10px;
     left: 180px;
+    opacity: 1;
   }
 
   #button8.visible {
     top: 90px;
     left: 170px;
+    opacity: 1;
   }
 
   #button9.visible {
-    bottom: 120px;
     left: 120px;
+    top: 170px;
+    opacity: 1;
   }
 }

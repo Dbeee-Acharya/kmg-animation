@@ -1,5 +1,6 @@
 import { playAudio, pauseAudio } from "./audioPlayer";
 import { stallInteraction } from "./stallInteraction";
+import { revealCategoryButtons } from "./streetLampInteraction";
 import { welcomeGateInteraction } from "./welcomeGateInteraction";
 
 const spriteMovement = () => {
@@ -26,12 +27,14 @@ const spriteMovement = () => {
       moveRight();
       welcomeGateInteraction();
       stallInteraction();
+      revealCategoryButtons();
     } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       playAudio();
       moveLeft();
       welcomeGateInteraction();
       stallInteraction();
+      revealCategoryButtons();
     }
   });
 
