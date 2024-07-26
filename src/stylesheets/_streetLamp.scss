@@ -2,7 +2,7 @@ $pole-dark: #1e2635;
 $pole-light: #233451;
 
 .streetlamp {
-  $streetlamp-height: 400px;
+  $streetlamp-height: 380px;
   width: 80px;
   height: $streetlamp-height;
   position: relative;
@@ -210,7 +210,10 @@ $pole-light: #233451;
     background: transparent;
     border: none;
   }
-  .light.visible,
+  .light.visible {
+    opacity: 0.5;
+  }
+
   .head .glass {
     animation: turn-on 2s ease 0s 1;
     opacity: 1;
@@ -228,5 +231,60 @@ $pole-light: #233451;
     100% {
       opacity: 1;
     }
+  }
+
+  .categories {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(245, 243, 176, 0.8);
+    position: absolute;
+    transition: all 1.2s ease-in;
+  }
+
+  #button1.visible {
+    left: -120px;
+    bottom: 120px;
+  }
+
+  #button2.visible {
+    left: -170px;
+    bottom: 220px;
+  }
+
+  #button3.visible {
+    bottom: 330px;
+    left: -150px;
+  }
+
+  #button4.visible {
+    top: -128px;
+    left: -90px;
+  }
+
+  #button5.visible {
+    top: -140px;
+    left: 30px;
+  }
+
+  #button6.visible {
+    top: -110px;
+    left: 140px;
+  }
+
+  #button7.visible {
+    top: -10px;
+    left: 180px;
+  }
+
+  #button8.visible {
+    top: 90px;
+    left: 170px;
+  }
+
+  #button9.visible {
+    bottom: 120px;
+    left: 120px;
   }
 }

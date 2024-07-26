@@ -2,6 +2,18 @@
 
 import { createElementWithClass } from "../controller/createElementsWithClass";
 
+const categories = [
+  "food",
+  "electronics",
+  "automobile",
+  "education",
+  "tech",
+  "fashion",
+  "test",
+  "newcategory",
+  "anothercategory",
+];
+
 const createStreetLamp = (productCategory = "Test Product") => {
   const streetLamp = createElementWithClass("div", "streetlamp");
   const baseTop = createElementWithClass("div", "basetop");
@@ -12,6 +24,11 @@ const createStreetLamp = (productCategory = "Test Product") => {
   const glass = createElementWithClass("div", "glass");
   const bot = createElementWithClass("div", "bot");
   const light = createElementWithClass("div", "light");
+
+  let id = 0;
+  categories.forEach((category) => {
+    streetLamp.appendChild(createCategoryButton(category, ++id));
+  });
 
   head.appendChild(top);
   head.appendChild(glass);
@@ -25,5 +42,13 @@ const createStreetLamp = (productCategory = "Test Product") => {
 
   return streetLamp;
 };
+
+function createCategoryButton(category, id) {
+  const categoryElement = createElementWithClass("button", "categories");
+  categoryElement.setAttribute("id", `button${id}`);
+  categoryElement.innerText = category;
+
+  return categoryElement;
+}
 
 export { createStreetLamp };
