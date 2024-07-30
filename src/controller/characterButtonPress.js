@@ -2,6 +2,7 @@
 import { createWelcomeGate } from "../view/welcomePage";
 import { createStreetLamp } from "../view/createCategoryButtons";
 import { revealCategoryButtons } from "./streetLampInteraction";
+import { categoryButtonEvent } from "./categoryButtonPress";
 
 function chooseCharacter(character) {
   const mainWrapper = document.querySelector(".main-wrapper");
@@ -15,6 +16,7 @@ function chooseCharacter(character) {
     createWelcomeGate(character);
 
     swiperWrapper.appendChild(createStreetLamp());
+    categoryButtonEvent();
 
     setTimeout(() => {
       mainWrapper.classList.remove("hide");

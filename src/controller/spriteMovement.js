@@ -25,16 +25,21 @@ const spriteMovement = () => {
       event.preventDefault();
       playAudio();
       moveRight();
-      welcomeGateInteraction();
+      if (document.querySelector(".gate-container") != null) {
+        welcomeGateInteraction();
+        revealCategoryButtons();
+      }
       stallInteraction();
-      revealCategoryButtons();
     } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       playAudio();
       moveLeft();
-      welcomeGateInteraction();
+
+      if (document.querySelector(".gate-container") != null) {
+        welcomeGateInteraction();
+        revealCategoryButtons();
+      }
       stallInteraction();
-      revealCategoryButtons();
     }
   });
 
